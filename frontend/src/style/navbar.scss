@@ -1,0 +1,27 @@
+.navContainer {
+  width: 100%;
+  height: 150px;
+  background-image: url("https://www.believe.com/sites/believe/files/styles/media_layerhighlight_desktop/public/2021-06/actionvance.jpg?h=71976bb4&itok=umj57LOU");
+  background-size: cover;
+  background-position: 80% 60%;
+  margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .navTitle {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    font-family: "Kulim Park";
+    color: #f0f0f0;
+    font-size: 3.2em;
+    font-weight: 300;
+  }
+
+  .oblicShape {
+    border-top: 150px solid #21517dec;
+    border-left: 0px solid transparent;
+    border-right: 120px solid transparent;
+    height: 0;
+    width: 500px;
+  }
+}
