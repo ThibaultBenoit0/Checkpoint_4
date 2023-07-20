@@ -1,36 +1,63 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { NavLink } from "react-router-dom";
+import SingleCard from "../components/SingleCard";
 
-export default function Home() {
+function Home() {
+  const [events, setEvents] = useState([]);
+
+  function fetchEvent() {
+    axios
+
+      .get(`${import.meta.env.VITE_BACKEND_URL}/event`)
+      .then((res) => {
+        setEvents(res.data);
+      })
+
+      .catch((err) =>
+        console.error(
+          "Une erreur est survenue dans la récupération des données",
+          err
+        )
+      );
+  }
+
+  useEffect(() => {
+    fetchEvent();
+  }, []);
+
+  const handleFetchEvent = () => {
+    fetchEvent();
+  };
+
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className="homeContainer">
+      <NavLink to="/add">
+        <button type="button" className="homeAddButton">
+          AJOUTER UN ÉVÈNEMENT
+        </button>
+      </NavLink>
+      <div className="homeCardsContainer">
+        {events.map((el) => {
+          return (
+            <SingleCard
+              key={el.id}
+              id={el.id}
+              title={el.title}
+              date={el.date}
+              description={el.description}
+              img={el.img}
+              link={el.link}
+              place={el.place}
+              price={el.price}
+              time={el.time}
+              fetchEvent={handleFetchEvent}
+            />
+          );
+        })}
+      </div>
+    </div>
   );
 }
+
+export default Home;
