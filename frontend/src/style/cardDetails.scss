@@ -89,6 +89,16 @@
       background-color: #f0f0f0;
       height: 40%;
     }
+
+    .cardDetailsLink {
+      a {
+        color: #21517d;
+
+        &:hover {
+          color: #14314b;
+        }
+      }
+    }
   }
   .cardDetailsButtonContainer {
     display: flex;

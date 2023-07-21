@@ -5,8 +5,8 @@ function Navbar() {
   return (
     <div>
       <div className="navContainer">
-        <NavLink to="/">
-          <h1 className="navTitle">ÉVÈNEMENTS</h1>
+        <NavLink to="/" className="navTitleLink">
+          <h1 className="navTitle">EVENT CREATOR</h1>
         </NavLink>
         <div className="oblicShape" />
         <div className="imageBackground" />
