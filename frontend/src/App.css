@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Kulim+Park:wght@200;300;400;600;700&family=Mina:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Kulim+Park:wght@200;300;400;600;700&family=Mina:wght@400;700&display=swap");
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: rgb(231,231,231);
-  background: linear-gradient(0deg, rgba(231,231,231,1) 50%, rgba(249,249,249,1) 100%); 
+  background: rgb(231, 231, 231);
+  background: linear-gradient(
+    0deg,
+    rgba(231, 231, 231, 1) 50%,
+    rgba(249, 249, 249, 1) 100%
+  );
 }
 
 .App {
