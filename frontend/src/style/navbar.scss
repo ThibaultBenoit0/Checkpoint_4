@@ -9,12 +9,14 @@
 
   .navTitle {
     position: absolute;
-    top: 20px;
+    top: 12px;
     left: 70px;
     font-family: "Kulim Park";
     color: #f0f0f0;
     font-size: 3.2em;
     font-weight: 300;
+    animation: slideInTitle 0.5s ease-in-out;
+    z-index: 3;
   }
 
   .oblicShape {
@@ -23,5 +25,33 @@
     border-right: 120px solid transparent;
     height: 0;
     width: 500px;
+    animation: slideIn 0.3s ease-in-out;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    transform: translateX(-50%);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateY(0%);
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideInTitle {
+  from {
+    transform: translateY(-100%);
+    transform: translateX(-50%);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateY(0%);
+    transform: translateX(0%);
+    opacity: 100%;
   }
 }

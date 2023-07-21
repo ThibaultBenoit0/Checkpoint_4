@@ -14,9 +14,12 @@
     padding: 8px;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.2s ease-in-out;
     &:hover {
       cursor: pointer;
       background-color: #14314b;
+      transform: translateY(-3px);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
     }
   }
 
@@ -27,6 +30,7 @@
     justify-content: center;
     width: 100%;
     padding: 20px;
+    animation: cardsAnimation 0.3s ease-out;
   }
 }
 
@@ -41,9 +45,23 @@
     width: 60px;
     height: 60px;
     color: #21517d;
+    transition: all 0.2s ease-in-out;
+
     &:hover {
       cursor: pointer;
       color: #14314b;
+      transform: translateY(-3px);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
     }
+  }
+}
+
+@keyframes cardsAnimation {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
   }
 }

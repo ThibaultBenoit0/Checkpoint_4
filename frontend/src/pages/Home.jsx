@@ -41,6 +41,7 @@ function Home() {
         {events.map((el) => {
           return (
             <SingleCard
+              className="singleCard"
               key={el.id}
               id={el.id}
               title={el.title}

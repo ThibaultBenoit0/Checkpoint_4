@@ -61,9 +61,13 @@
       padding: 8px;
       font-weight: 600;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: all 0.2s ease-in-out;
+
       &:hover {
         cursor: pointer;
         background-color: #14314b;
+        transform: translateY(-3px);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
       }
     }
 
@@ -88,12 +92,6 @@
       width: auto;
     }
   }
-
-  // .cardBackground {
-  //     position: absolute;
-  //     background-color: #F0F0F0;
-  //     height: 40%;
-  // }
 }
 .cardButtonContainer {
   display: flex;
@@ -109,9 +107,13 @@
     padding: 8px;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.2s ease-in-out;
+
     &:hover {
       cursor: pointer;
       background-color: #14314b;
+      transform: translateY(-3px);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 8px 8px;
     }
   }
 }
